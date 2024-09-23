@@ -13,11 +13,10 @@ Este projeto é um aplicativo desenvolvido em React Native que permite consultar
 
 - React Native
 - Expo
-- Axios (para requisições HTTP)
 - React Navigation (para navegação)
 
 ## Instalação
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/LAOSTI/Tabela-Fipe
