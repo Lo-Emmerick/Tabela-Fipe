@@ -4,8 +4,20 @@ import { useNavigation } from "@react-navigation/native";
 
 export default (props) => {
   const navigation = useNavigation();
+
+  const getType = () => {
+    switch (props.text) {
+      case "Motocicleta":
+        return "motos"
+      case "Carro":
+        return "carros"
+      default:
+        return "caminhoes"
+    }
+  }
+
   const selectBrand = () => {
-    navigation.navigate('SelectBrand', { type: props.text, text: "a marca" })
+    navigation.navigate('SelectBrand', { type: getType()})
   }
 
   return (
