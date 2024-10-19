@@ -1,5 +1,5 @@
 import { View, Text} from 'react-native';
-import Header from '../header'
+import Header from '../../components/header'
 import styles from './style'
 
 export default function FipeScreen() {

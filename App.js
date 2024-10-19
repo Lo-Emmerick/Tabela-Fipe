@@ -1,11 +1,9 @@
-import { View, Text} from 'react-native';
-import Teste from './src/screen/vehicleSelectionScreen'
-import styles from './src/screen/vehiclePrice/style'
+import React from 'react';
+import { SafeAreaView , Text} from 'react-native';
+import Navigation from './src/navigation';
 
 export default function FipeScreen() {
   return (
-    <View style={styles.container}>
-      <Teste type="o modelo"/>
-    </View>
+    <Navigation/>
   );
 }

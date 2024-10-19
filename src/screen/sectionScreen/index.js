@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity} from 'react-native';
+import { useEffect, useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import Header from '../../components/header'
 import styles from './style'
 
-const VehicleBrandScreen = (props) => {
+const VehicleBrandScreen = ({ route: { params: { type, text } } }) => {
   const [searchText, setSearchText] = useState('');
   const [filteredBrand, setFilteredBrand] = useState('');
 
@@ -23,13 +23,13 @@ const VehicleBrandScreen = (props) => {
 
   return (
     <View style={styles.container}>
-      <Header/>
-      <Text style={styles.subtitle}>Selecione {props.type} do veículo</Text>
+      <Header />
+      <Text style={styles.subtitle}>Selecione {text} do veículo</Text>
 
       <View style={styles.searchContainer}>
         <TextInput
           style={styles.input}
-          placeholder={`Busque ${props.type} do veículo`}
+          placeholder={`Busque ${text} do veículo`}
           value={searchText}
           onChangeText={handleSearch}
         />
