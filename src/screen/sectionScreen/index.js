@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import Header from '../../components/header';
 import styles from './style';
 import { FipeAPI } from '../../services/fipe-service';
@@ -124,7 +124,7 @@ const VehicleBrandScreen = ({ route: { params: { type, brand, model} } }) => {
           </TouchableOpacity>
         ))
       ) : (
-        <Text>Nenhuma marca encontrada.</Text>
+        <Text>Nada encontrado</Text>
       )}
     </View>
   );
